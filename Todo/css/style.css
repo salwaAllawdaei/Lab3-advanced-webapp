@@ -1,7 +1,15 @@
 body {
     margin: 0;
+    background-color: rgb(125, 226, 169);
 }
 
 #items .completetrue {
-    color: lightcoral;
+    color: aliceblue;
+}
+
+button:hover {
+    padding: 2px;
+    background-color: blueviolet;
+    font-weight: 500;
+    font-size: large;
 }
