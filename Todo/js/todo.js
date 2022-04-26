@@ -5,14 +5,14 @@ let todoEl = document.getElementById("items");
 document.getElementById("task-submit").addEventListener("click", async () => {
     let taskNameEl = document.getElementById("task-name");
     let taskDescEl = document.getElementById("task-desc");
+    let taskRewardEl = document.getElementById("task-reward");
     let taskCompleteEl = document.getElementById("task-complete");
-    let taskMustEl = document.getElementById("task-must");
     let taskName = taskNameEl.value;
     let taskDesc = taskDescEl.value;
+    let taskReward = taskRewardEl.value;
     let taskComplete = taskCompleteEl.checked;
-    let taskMust = taskMustEl.checked;
     if (taskName.trim() != '') {
-        let newTask = { task: taskName, instructions: taskDesc, isComplete: taskComplete, aMustDo: taskMust };
+        let newTask = { task: taskName, instructions: taskDesc, reward: taskReward, isComplete: taskComplete };
 
         let newTodoData = await fetch(todoServiceUrl,
             {
@@ -29,8 +29,8 @@ document.getElementById("task-submit").addEventListener("click", async () => {
     }
 });
 
-document.getElementById("edit-task-submit").addEventListener("click", async () => {
-    let editTaskIdEl = document.getElementById("edit-task-id");
+document.getElementById("btnupdate").addEventListener("click", async () => {
+    let editTaskIdEl = document.getElementById("task-update");
     let editTaskId = editTaskIdEl.value;
     if (editTaskId.trim() != '') {
         let editTask = { todoItemId: editTaskId };
@@ -49,8 +49,8 @@ document.getElementById("edit-task-submit").addEventListener("click", async () =
     }
 });
 
-document.getElementById("del-task-submit").addEventListener("click", async () => {
-    let delTaskIdEl = document.getElementById("del-task-id");
+document.getElementById("btndelete").addEventListener("click", async () => {
+    let delTaskIdEl = document.getElementById("task-delete");
     let delTaskId = delTaskIdEl.value;
     if (delTaskId.trim() != '') {
         let delTask = { todoItemId: delTaskId };
@@ -77,7 +77,7 @@ let getTodos = async function () {
         })).json();
     let html = "";
     html += "<ol>";
-    html += "<div> Id  Task Name</div>";
+    html += "<div> Id Task Name</div>";
     for (let i = 0; i < todoData.length; i++) {
         html += `<li class="complete${todoData[i].isComplete}">${todoData[i].todoItemId}  ${todoData[i].task}</li>`;
     }

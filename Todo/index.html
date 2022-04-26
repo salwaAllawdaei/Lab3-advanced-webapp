@@ -12,24 +12,22 @@
 <body>
     <div id="items"></div>
     <div id="task-new">
-        <h4>Add a new task</h4>
-        Task Name<input type="text" id="task-name" />
-        <br>Instructions<input type="text" id="task-desc" />
-        <br>
-        Is it completed?<input type="checkbox" id="task-complete" />
-        <br>
-        Do you really have to do it?<input type="checkbox" id="task-must" />
-        <input type="button" id="task-submit" class="btn" value="add task" />
+        <h4>Add task!</h4>
+        <div>Task<input type="text" id="task-name" /></div>
+        <div>Instructions<input type="text" id="task-desc" /></div>
+        <div>Reward<input type="text" id="task-reward" /></div>
+        <div>Is it completed?<input type="checkbox" id="task-complete" /></div>
+        <input type="button" id="task-submit" class="btn" value="add" />
     </div>
     <div id="task-edit">
-        <h4>Please enter the id of a task to mark as completed</h4>
-        <input type="text" id="edit-task-id" />
-        <input type="button" id="edit-task-submit" class="btn" value="edit task" />
+        <h4>Task serial number that's done!</h4>
+        <input type="text" id="task-update" />
+        <input type="button" id="btnupdate" class="btn" value="update" />
     </div>
-    <div id="task-del">
-        <h4>Please enter the id of a task to delete</h4>
-        <input type="text" id="del-task-id" />
-        <input type="button" id="del-task-submit" class="btn" value="delete task" />
+    <div id="task-cancel">
+        <h4>Task serial number to be deleted</h4>
+        <input type="text" id="task-delete" />
+        <input type="button" id="btndelete" class="btn" value="delete" />
     </div>
     <script src="./js/todo.js"></script>
 </body>
