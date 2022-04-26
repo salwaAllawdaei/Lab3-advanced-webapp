@@ -13,3 +13,39 @@ button:hover {
     font-weight: 500;
     font-size: large;
 }
+
+#task-submit:hover {
+    padding: 2px;
+    background-color: blueviolet;
+    font-weight: 500;
+    font-size: large;
+    color: aliceblue;
+}
+
+#btnupdate:hover {
+    padding: 2px;
+    background-color: blueviolet;
+    font-weight: 500;
+    font-size: large;
+    color: aliceblue;
+}
+
+#btndelete:hover {
+    padding: 2px;
+    background-color: blueviolet;
+    font-weight: 500;
+    font-size: large;
+    color: aliceblue;
+}
+
+#task-submit {
+    width: 80px;
+}
+
+#btndelete {
+    width: 80px;
+}
+
+#btnupdate {
+    width: 80px;
+}
